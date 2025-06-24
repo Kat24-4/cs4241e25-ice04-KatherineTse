@@ -1,17 +1,16 @@
-# ICE 04: Websockets
+# Katherine Tse ICE 04 Readme
 
-In this activity, you will work to build a simple websockets application
+### Race the Type: Typing Speed Racer 
 
-### Instructions
+**Hosting Link**: cs4241e25-ice04-katherinetse-production.up.railway.app
 
-1. Decide whether you want to work alone or with others in this ISP. If you are working with others, make sure to list all of your group members in your README.
+**Contributors**: Katherine Tse (solo)
 
-2. Implement the basic websockets setup demo from the [sockets guide](https://github.com/jmcuneo/cs4241-guides/blob/master/using.sockets.md). Make sure that is up and running correctly before proceeding to the next step.
+**Instructions**:
+- Load up two windows of the web applicaiton.
+- Select a difficulty level (Easy, Medium, Hard)
+- Start typing and watch as the progress bar moves along.
+- When the first person makes it to 100%, an alert will sound letting you know who won!
+- Note: This is a really basic program and therefore does not do spell check, but your typing will be displayed on the screen of the other player and so they can check how accurate you are.
 
-3. Using the demo as a starting point, create a simple networked web application. Make sure the application can handle more than one person. If you're completing this assignment by yourself, find a friend to test it with you, or try to connect from a second computer.
-
-4. Write up a README file that includes the names of all of your group members and a description of what the application does. Be sure to list anything a user might need to know before using your application. Also describe any challenges you faced.
-
-5. Submit your final assignment by initiating a pull request against this repo.
-
-**NOTE:** The demo uses Svelte, but you are welcome to switch to a different UI framework if you prefer.
+**Challenges**: The biggest challenge for this project that I faced was getting used to the Svelte structure. Once I figured out what I wanted to do, it defintely took me a sec to better understand exactly how to do it with Svelte. I eventually figured it out and had pretty smooth saily from there. It did take me a second to fully grasp the data transfer but, after messing around with it a bit, I was able to figure it out. 
