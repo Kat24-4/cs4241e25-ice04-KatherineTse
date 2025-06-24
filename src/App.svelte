@@ -5,7 +5,7 @@
   let theyTyped = ""
   let theirProgress = 0
 
-  const ws = new WebSocket( 'ws://cs4241e25-ice04-katherinetse-production.up.railway.app' )
+  const ws = new WebSocket( 'wss://cs4241e25-ice04-katherinetse-production.up.railway.app' )
 
   // when connection is established...
   ws.onopen = () => {
