@@ -12,14 +12,16 @@
 
     ws.onmessage = async msg => {
       received = await msg.data.text()
-      console.log(received === "1")
+
       if (received === "1") {
         sentence = "This is a short blurb to test your typing ability. You even get to race a friend. How fun!"
       } else if (received === "2") {
         sentence = "This is a more complex blurb. It will require more than just a few sentences, and it should take you a bit longer than the easy one. If you're looking for more of a challenge try hard."
       } else if (received === "3") {
         sentence = "This is the most complex blurb; it includes various punctuation as well as many words. Did you know that the sentence 'A quick brown fox jumped over the lazy dog.' uses all the letters in the alphabet? That is such a fascinating thing to think about. Wouldn't you agree?"
-      } else if (received !== "1" && received !== "2" && received !== "3") {
+      } else if (received === "win") {
+        alert("They Won. :(")
+      }else if (received !== "1" && received !== "2" && received !== "3" && received !== "win") {
         theyTyped = received
         theirProgress = Math.min(100, Math.floor((received.length / sentence.length) * 100))
       }
@@ -29,6 +31,7 @@
   const send = function() {
     typed = document.querySelector('input').value
     ws.send( typed )
+    win()
   }
 
   const easy = function() {
@@ -44,6 +47,13 @@
   const hard = function() {
     sentence = "This is the most complex blurb; it includes various punctuation as well as many words. Did you know that the sentence 'A quick brown fox jumped over the lazy dog.' uses all the letters in the alphabet? That is such a fascinating thing to think about. Wouldn't you agree?"
     ws.send( 3 )
+  }
+
+  const win = function() {
+    if (Math.floor((typed.length / sentence.length) * 100) === 100) {
+      ws.send("win")
+      alert("You Won! :)")
+    }
   }
 </script>
 
